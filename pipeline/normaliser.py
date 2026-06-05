@@ -52,6 +52,12 @@ class Normaliser:
         def to_rupees(lpa_value: float) -> float:
             return lpa_value * 100000.0
 
+        # Check for Crore (Cr)
+        cr_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:cr|crore)', text)
+        if cr_match:
+            val = float(cr_match.group(1))
+            return val * 10000000.0
+
         range_match = re.search(r'(\d+(?:\.\d+)?)\s*[l]?[a-z]*\s*(?:-|–|to)\s*(\d+(?:\.\d+)?)\s*[l]?[a-z]*', text)
         if range_match:
             val1 = float(range_match.group(1))
@@ -139,6 +145,7 @@ Normalization Rules:
 1. base_salary: Extract the annual salary in Indian Rupees (INR).
    - For ranges like "₹18–22 LPA" or "18 to 22 lakhs", calculate the midpoint (e.g. 20 LPA = 2000000 INR).
    - For "₹45,00,000 per annum", return 4500000.
+   - For Crores like "₹4.17 Cr" or "2 Cr", multiply by 10,000,000 (e.g. 4.17 Cr = 41700000).
    - If not disclosed or not present, return null.
 2. experience_years: Extract the years of experience as an integer.
    - For ranges like "5–8 yrs", return the midpoint (e.g. 6).
@@ -223,6 +230,7 @@ Normalization Rules for each record:
 1. base_salary: Extract the annual salary in Indian Rupees (INR).
    - For ranges like "₹18–22 LPA" or "18 to 22 lakhs", calculate the midpoint (e.g. 20 LPA = 2000000 INR).
    - For "₹45,00,000 per annum", return 4500000.
+   - For Crores like "₹4.17 Cr" or "2 Cr", multiply by 10,000,000 (e.g. 4.17 Cr = 41700000).
    - If not disclosed or not present, return null.
 2. experience_years: Extract the years of experience as an integer.
    - For ranges like "5–8 yrs", return the midpoint (e.g. 6).
