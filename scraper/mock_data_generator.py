@@ -7,7 +7,7 @@ COMPANIES = [
     "Google India Pvt. Ltd.", "GOOGLE", "Tata Consultancy Services", 
     "TCS Ltd.", "amazon.com", "Amazon Web Services", "Infosys BPO", 
     "Wipro Technologies", "Flipkart Internet Pvt Ltd", "Microsoft India", 
-    "Meta Platforms", "Goldman Sachs India"
+    "Meta Platforms", "Goldman Sachs India", "Razorpay", "Meesho", "Zepto", "NVIDIA"
 ]
 
 SALARIES_FORMATS = [
@@ -16,11 +16,12 @@ SALARIES_FORMATS = [
     "₹{exact},00,000 per annum", 
     "{exact} LPA", 
     "₹{low}L - ₹{high}L", 
-    "{low}-{high} LPA CTC"
+    "{low}-{high} LPA CTC",
+    "₹{cr} Cr"
 ]
 
 EXPERIENCES = [
-    "5–8 yrs", "3+ years", "2 to 4 years", "7 Years", "1-2 yr"
+    "5–8 yrs", "3+ years", "2 to 4 years", "7 Years", "1-2 yr", "10+ years"
 ]
 
 LOCATIONS = [
@@ -29,22 +30,37 @@ LOCATIONS = [
 ]
 
 ROLES = [
-    "Software Engineer", "Senior Software Engineer", "SDE II", 
-    "Staff Engineer", "Data Analyst", "Senior Data Analyst", "Data Scientist",
-    "Product Manager", "Engineering Manager", "Principal Engineer"
+    "Software Engineer (SDE_I)", "Software Engineer (SDE_II)", "Software Engineer (SDE_III)", 
+    "Software Engineer (L4)", "Software Engineer (L5)", "Software Engineer (L6)", 
+    "Software Engineer (STAFF)", "Software Engineer (PRINCIPAL)", 
+    "Data Analyst (L3)", "Data Analyst (L4)", "Senior Data Analyst", "Data Scientist",
+    "Product Manager (SDE_II)", "Product Manager (L4)", "Product Manager (L5)", "Engineering Manager"
 ]
 
 def generate_random_record():
-    low = random.randint(12, 45)
-    high = low + random.randint(2, 6)
-    exact = random.randint(15, 55)
+    role = random.choice(ROLES)
+    
+    # Scale salaries based on role seniority to match the detailed dashboard
+    if any(lvl in role for lvl in ["L5", "L6", "STAFF", "PRINCIPAL", "SDE_III", "Manager"]):
+        low = random.randint(45, 90)
+        high = low + random.randint(5, 15)
+        exact = random.randint(55, 99)
+        cr = round(random.uniform(1.05, 4.50), 2)
+    else:
+        low = random.randint(12, 45)
+        high = low + random.randint(2, 6)
+        exact = random.randint(15, 55)
+        cr = round(random.uniform(0.15, 0.95), 2)
     
     fmt = random.choice(SALARIES_FORMATS)
-    salary_text = fmt.format(low=low, high=high, exact=exact)
+    if "Cr" in fmt:
+        salary_text = fmt.format(cr=cr, low=low, high=high, exact=exact)
+    else:
+        salary_text = fmt.format(low=low, high=high, exact=exact)
     
     return {
         "raw_company": random.choice(COMPANIES),
-        "raw_role": random.choice(ROLES),
+        "raw_role": role,
         "raw_salary_text": salary_text,
         "raw_location": random.choice(LOCATIONS),
         "raw_experience": random.choice(EXPERIENCES)

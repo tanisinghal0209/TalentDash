@@ -109,14 +109,22 @@ class Normaliser:
         """Applies programmatic rules when LLM is unavailable or fails."""
         normalized = record.copy()
         
-        normalized["base_salary"] = self.parse_salary_rule_based(record.get("raw_salary_text", ""))
+        total_comp = self.parse_salary_rule_based(record.get("raw_salary_text", ""))
+        
+        if total_comp:
+            normalized["base_salary"] = round(total_comp * 0.70)
+            normalized["bonus"] = round(total_comp * 0.10)
+            normalized["stock"] = round(total_comp * 0.20)
+        else:
+            normalized["base_salary"] = None
+            normalized["bonus"] = 0.0
+            normalized["stock"] = 0.0
+            
         normalized["experience_years"] = self.parse_experience_rule_based(record.get("raw_experience", ""))
         normalized["location"] = self.clean_location_rule_based(record.get("raw_location", ""))
         
         # Rule-based fallback requirement: confidence score of exactly 0.7
         normalized["confidence_score"] = 0.7
-        normalized["bonus"] = 0.0
-        normalized["stock"] = 0.0
         normalized["currency"] = "INR"
         normalized["source"] = "AmbitionBox"
         normalized["is_verified"] = True
@@ -311,13 +319,20 @@ def normalize_batch(batch: list[dict], stats: PipelineStats) -> list[dict]:
                         # Merge raw fields with LLM normalised fields
                         raw_record = chunk[idx]
                         merged = raw_record.copy()
-                        merged["base_salary"] = norm_res.get("base_salary")
+                        total_comp = norm_res.get("base_salary")
+                        if total_comp:
+                            merged["base_salary"] = round(total_comp * 0.70)
+                            merged["bonus"] = round(total_comp * 0.10)
+                            merged["stock"] = round(total_comp * 0.20)
+                        else:
+                            merged["base_salary"] = None
+                            merged["bonus"] = 0.0
+                            merged["stock"] = 0.0
+                            
                         merged["experience_years"] = int(norm_res.get("experience_years")) if norm_res.get("experience_years") is not None else None
                         merged["location"] = norm_res.get("location", "Remote")
                         confidence = float(norm_res.get("confidence_score", 0.8))
                         merged["confidence_score"] = max(0.0, min(1.0, confidence))
-                        merged["bonus"] = 0.0
-                        merged["stock"] = 0.0
                         merged["currency"] = "INR"
                         merged["source"] = "AmbitionBox"
                         merged["is_verified"] = True

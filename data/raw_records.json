@@ -1,562 +1,562 @@
 [
-  {
-    "raw_company": "Tata Consultancy Services",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Noida",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Infosys BPO",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Hyderabad",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Wipro Technologies",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Data Analyst",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Pune",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Google India Pvt. Ltd.",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Chennai",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Data Analyst",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Wipro Technologies",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Gurugram",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Principal Engineer",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Gurugram",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Bengaluru",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "SDE II",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Mumbai",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Hyderabad",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Bangalore",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Google India Pvt. Ltd.",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Pune",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Pune",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Google India Pvt. Ltd.",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Bengaluru",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Tata Consultancy Services",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Bengaluru",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Google India Pvt. Ltd.",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Chennai",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Noida",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Chennai",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Bengaluru",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Chennai",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "SDE II",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Hyderabad",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Delhi NCR",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "SDE II",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "SDE II",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Hyderabad",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Wipro Technologies",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Mumbai",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Noida",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "SDE II",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Gurugram",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Goldman Sachs India",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Bengaluru",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Data Analyst",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Noida",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Pune",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Delhi NCR",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Goldman Sachs India",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Bangalore",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Goldman Sachs India",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Pune",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Chennai",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "SDE II",
-    "raw_salary_text": "₹12L - ₹15L",
-    "raw_location": "Bangalore",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Mumbai",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Pune",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Gurugram",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Infosys BPO",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Bengaluru",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Noida",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Mumbai",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Tata Consultancy Services",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Bengaluru",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Data Analyst",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Bangalore",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Tata Consultancy Services",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Pune",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Amazon Web Services",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Bangalore",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Senior Data Analyst",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Chennai",
-    "raw_experience": "2 to 4 years"
-  },
-  {
-    "raw_company": "Infosys BPO",
-    "raw_role": "Product Manager",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Mumbai",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "amazon.com",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Tata Consultancy Services",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Gurugram",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "18 to 22 lakhs",
-    "raw_location": "Bangalore",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Flipkart Internet Pvt Ltd",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Hyderabad",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Staff Engineer",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Chennai",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Senior Software Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Gurugram",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "Wipro Technologies",
-    "raw_role": "SDE II",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Noida",
-    "raw_experience": "1-2 yr"
-  },
-  {
-    "raw_company": "GOOGLE",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "₹45,00,000 per annum",
-    "raw_location": "Bengaluru",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "TCS Ltd.",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Gurgaon",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Meta Platforms",
-    "raw_role": "Engineering Manager",
-    "raw_salary_text": "25-30 LPA CTC",
-    "raw_location": "Bengaluru",
-    "raw_experience": "7 Years"
-  },
-  {
-    "raw_company": "",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "₹18–22 LPA",
-    "raw_location": "Noida",
-    "raw_experience": "5–8 yrs"
-  },
-  {
-    "raw_company": "Google India Pvt. Ltd.",
-    "raw_role": "Data Analyst",
-    "raw_salary_text": "Not disclosed",
-    "raw_location": "Mumbai",
-    "raw_experience": "3+ years"
-  },
-  {
-    "raw_company": "Microsoft India",
-    "raw_role": "Software Engineer",
-    "raw_salary_text": "20 LPA",
-    "raw_location": "Hyderabad",
-    "raw_experience": "Fresher"
-  },
-  {
-    "raw_company": "",
-    "raw_role": "Data Scientist",
-    "raw_salary_text": "",
-    "raw_location": "",
-    "raw_experience": ""
-  }
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Software Engineer (SDE_II)",
+        "raw_salary_text": "₹28L - ₹34L",
+        "raw_location": "Gurgaon",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "81 LPA",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Razorpay",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "₹3.58 Cr",
+        "raw_location": "Hyderabad",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "80 LPA",
+        "raw_location": "Gurugram",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Infosys BPO",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "₹1.62 Cr",
+        "raw_location": "Noida",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "65 LPA",
+        "raw_location": "Pune",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "GOOGLE",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "₹85L - ₹95L",
+        "raw_location": "Bengaluru",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Wipro Technologies",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "72 to 79 lakhs",
+        "raw_location": "Pune",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Amazon Web Services",
+        "raw_role": "Software Engineer (L4)",
+        "raw_salary_text": "₹0.64 Cr",
+        "raw_location": "Mumbai",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Product Manager (L5)",
+        "raw_salary_text": "₹83,00,000 per annum",
+        "raw_location": "Hyderabad",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Meta Platforms",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "25-30 LPA CTC",
+        "raw_location": "Bengaluru",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Meta Platforms",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "71-86 LPA CTC",
+        "raw_location": "Bangalore",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Software Engineer (L4)",
+        "raw_salary_text": "28-34 LPA CTC",
+        "raw_location": "Bangalore",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "₹52–58 LPA",
+        "raw_location": "Mumbai",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "81 to 91 lakhs",
+        "raw_location": "Chennai",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "₹71L - ₹83L",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Software Engineer (PRINCIPAL)",
+        "raw_salary_text": "90 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Razorpay",
+        "raw_role": "Data Analyst (L4)",
+        "raw_salary_text": "₹19L - ₹23L",
+        "raw_location": "Gurugram",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Zepto",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "95 LPA",
+        "raw_location": "Gurugram",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "GOOGLE",
+        "raw_role": "Data Analyst (L4)",
+        "raw_salary_text": "35-40 LPA CTC",
+        "raw_location": "Chennai",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Wipro Technologies",
+        "raw_role": "Software Engineer (L6)",
+        "raw_salary_text": "₹2.33 Cr",
+        "raw_location": "Bengaluru",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "NVIDIA",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "58-66 LPA CTC",
+        "raw_location": "Bangalore",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "61-71 LPA CTC",
+        "raw_location": "Hyderabad",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Product Manager (L5)",
+        "raw_salary_text": "₹1.96 Cr",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Software Engineer (L6)",
+        "raw_salary_text": "₹62–77 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Tata Consultancy Services",
+        "raw_role": "Software Engineer (SDE_II)",
+        "raw_salary_text": "₹21–24 LPA",
+        "raw_location": "Chennai",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "GOOGLE",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "81-89 LPA CTC",
+        "raw_location": "Bengaluru",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Amazon Web Services",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "47-53 LPA CTC",
+        "raw_location": "Hyderabad",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Data Analyst (L3)",
+        "raw_salary_text": "₹40L - ₹46L",
+        "raw_location": "Bengaluru",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Software Engineer (L6)",
+        "raw_salary_text": "60 to 74 lakhs",
+        "raw_location": "Bengaluru",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Tata Consultancy Services",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "₹80,00,000 per annum",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Zepto",
+        "raw_role": "Software Engineer (SDE_II)",
+        "raw_salary_text": "₹45,00,000 per annum",
+        "raw_location": "Gurgaon",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Software Engineer (L4)",
+        "raw_salary_text": "26-32 LPA CTC",
+        "raw_location": "Mumbai",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Software Engineer (PRINCIPAL)",
+        "raw_salary_text": "₹4.13 Cr",
+        "raw_location": "Hyderabad",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Wipro Technologies",
+        "raw_role": "Software Engineer (SDE_II)",
+        "raw_salary_text": "20-25 LPA CTC",
+        "raw_location": "Mumbai",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Razorpay",
+        "raw_role": "Software Engineer (SDE_II)",
+        "raw_salary_text": "₹20–22 LPA",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "77-86 LPA CTC",
+        "raw_location": "Pune",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "₹86,00,000 per annum",
+        "raw_location": "Pune",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "NVIDIA",
+        "raw_role": "Software Engineer (SDE_I)",
+        "raw_salary_text": "₹55,00,000 per annum",
+        "raw_location": "Chennai",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Razorpay",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "46-53 LPA CTC",
+        "raw_location": "Hyderabad",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Meta Platforms",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "72 to 87 lakhs",
+        "raw_location": "Bengaluru",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Meesho",
+        "raw_role": "Software Engineer (STAFF)",
+        "raw_salary_text": "₹90L - ₹105L",
+        "raw_location": "Pune",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Senior Data Analyst",
+        "raw_salary_text": "51 LPA",
+        "raw_location": "Gurugram",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Meesho",
+        "raw_role": "Data Analyst (L4)",
+        "raw_salary_text": "25 to 27 lakhs",
+        "raw_location": "Noida",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Data Analyst (L4)",
+        "raw_salary_text": "₹27,00,000 per annum",
+        "raw_location": "Hyderabad",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "63 to 69 lakhs",
+        "raw_location": "Hyderabad",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "GOOGLE",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "50-57 LPA CTC",
+        "raw_location": "Hyderabad",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Senior Data Analyst",
+        "raw_salary_text": "₹0.76 Cr",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Goldman Sachs India",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "₹60L - ₹65L",
+        "raw_location": "Bangalore",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "GOOGLE",
+        "raw_role": "Product Manager (SDE_II)",
+        "raw_salary_text": "₹55,00,000 per annum",
+        "raw_location": "Noida",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Amazon Web Services",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "₹67–79 LPA",
+        "raw_location": "Mumbai",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Amazon Web Services",
+        "raw_role": "Product Manager (L5)",
+        "raw_salary_text": "₹74,00,000 per annum",
+        "raw_location": "Gurugram",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Wipro Technologies",
+        "raw_role": "Software Engineer (L6)",
+        "raw_salary_text": "₹86L - ₹99L",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Razorpay",
+        "raw_role": "Senior Data Analyst",
+        "raw_salary_text": "19 to 23 lakhs",
+        "raw_location": "Hyderabad",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Tata Consultancy Services",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "₹1.66 Cr",
+        "raw_location": "Pune",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "NVIDIA",
+        "raw_role": "Product Manager (SDE_II)",
+        "raw_salary_text": "₹55,00,000 per annum",
+        "raw_location": "Mumbai",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Product Manager (L5)",
+        "raw_salary_text": "₹97,00,000 per annum",
+        "raw_location": "Chennai",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "Meesho",
+        "raw_role": "Data Scientist",
+        "raw_salary_text": "₹0.41 Cr",
+        "raw_location": "Bengaluru",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Meta Platforms",
+        "raw_role": "Data Analyst (L4)",
+        "raw_salary_text": "₹0.43 Cr",
+        "raw_location": "Noida",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Data Analyst (L3)",
+        "raw_salary_text": "14 to 19 lakhs",
+        "raw_location": "Bangalore",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "TCS Ltd.",
+        "raw_role": "Software Engineer (STAFF)",
+        "raw_salary_text": "87-102 LPA CTC",
+        "raw_location": "Bengaluru",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Software Engineer (SDE_I)",
+        "raw_salary_text": "₹0.75 Cr",
+        "raw_location": "Mumbai",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "69-78 LPA CTC",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Amazon Web Services",
+        "raw_role": "Product Manager (SDE_II)",
+        "raw_salary_text": "₹93,00,000 per annum",
+        "raw_location": "Gurgaon",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Software Engineer (L6)",
+        "raw_salary_text": "₹69–81 LPA",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Software Engineer (L5)",
+        "raw_salary_text": "84-93 LPA CTC",
+        "raw_location": "Hyderabad",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Product Manager (L4)",
+        "raw_salary_text": "76 to 85 lakhs",
+        "raw_location": "Gurugram",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Product Manager (L5)",
+        "raw_salary_text": "50 to 60 lakhs",
+        "raw_location": "Mumbai",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Data Analyst (L3)",
+        "raw_salary_text": "₹42,00,000 per annum",
+        "raw_location": "Gurugram",
+        "raw_experience": "10+ years"
+    },
+    {
+        "raw_company": "amazon.com",
+        "raw_role": "Software Engineer (SDE_III)",
+        "raw_salary_text": "₹98,00,000 per annum",
+        "raw_location": "Delhi NCR",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Flipkart Internet Pvt Ltd",
+        "raw_role": "Data Scientist",
+        "raw_salary_text": "₹38–42 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Zepto",
+        "raw_role": "Product Manager (SDE_II)",
+        "raw_salary_text": "₹90–104 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Data Analyst (L3)",
+        "raw_salary_text": "₹24–26 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "1-2 yr"
+    },
+    {
+        "raw_company": "Tata Consultancy Services",
+        "raw_role": "Data Analyst (L3)",
+        "raw_salary_text": "₹32,00,000 per annum",
+        "raw_location": "Hyderabad",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Tata Consultancy Services",
+        "raw_role": "Software Engineer (SDE_I)",
+        "raw_salary_text": "₹45,00,000 per annum",
+        "raw_location": "Bengaluru",
+        "raw_experience": "2 to 4 years"
+    },
+    {
+        "raw_company": "Meta Platforms",
+        "raw_role": "Engineering Manager",
+        "raw_salary_text": "25-30 LPA CTC",
+        "raw_location": "Bengaluru",
+        "raw_experience": "7 Years"
+    },
+    {
+        "raw_company": "",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹18–22 LPA",
+        "raw_location": "Noida",
+        "raw_experience": "5–8 yrs"
+    },
+    {
+        "raw_company": "Google India Pvt. Ltd.",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "Not disclosed",
+        "raw_location": "Mumbai",
+        "raw_experience": "3+ years"
+    },
+    {
+        "raw_company": "Microsoft India",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "20 LPA",
+        "raw_location": "Hyderabad",
+        "raw_experience": "Fresher"
+    },
+    {
+        "raw_company": "",
+        "raw_role": "Data Scientist",
+        "raw_salary_text": "",
+        "raw_location": "",
+        "raw_experience": ""
+    }
 ]
