@@ -10,9 +10,13 @@ COMPANIES = [
     "Meta Platforms", "Goldman Sachs India"
 ]
 
-SALARIES = [
-    "₹18–22 LPA", "18 to 22 lakhs", "₹45,00,000 per annum", 
-    "20 LPA", "₹12L - ₹15L", "25-30 LPA CTC"
+SALARIES_FORMATS = [
+    "₹{low}–{high} LPA", 
+    "{low} to {high} lakhs", 
+    "₹{exact},00,000 per annum", 
+    "{exact} LPA", 
+    "₹{low}L - ₹{high}L", 
+    "{low}-{high} LPA CTC"
 ]
 
 EXPERIENCES = [
@@ -31,10 +35,17 @@ ROLES = [
 ]
 
 def generate_random_record():
+    low = random.randint(12, 45)
+    high = low + random.randint(2, 6)
+    exact = random.randint(15, 55)
+    
+    fmt = random.choice(SALARIES_FORMATS)
+    salary_text = fmt.format(low=low, high=high, exact=exact)
+    
     return {
         "raw_company": random.choice(COMPANIES),
         "raw_role": random.choice(ROLES),
-        "raw_salary_text": random.choice(SALARIES),
+        "raw_salary_text": salary_text,
         "raw_location": random.choice(LOCATIONS),
         "raw_experience": random.choice(EXPERIENCES)
     }
