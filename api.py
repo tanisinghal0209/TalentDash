@@ -324,27 +324,30 @@ def dashboard():
 <style>
 * {{ margin:0; padding:0; box-sizing:border-box; }}
 :root {{
-  --bg: #0a0a0f;
-  --surface: #12121a;
-  --surface-2: #1a1a28;
-  --border: #2a2a3d;
-  --text: #e4e4ed;
-  --text-dim: #8888a4;
-  --accent: #6366f1;
-  --accent-glow: rgba(99,102,241,0.15);
-  --green: #4ade80;
-  --amber: #fbbf24;
-  --red: #f87171;
-  --cyan: #22d3ee;
+  --bg: #F7F7F7;
+  --surface: #FFFFFF;
+  --surface-2: #FFFFFF;
+  --border: #EBEBEB;
+  --text: #222222;
+  --text-body: #484848;
+  --text-dim: #717171;
+  --accent: #FF5A5F;
+  --accent-glow: rgba(255,90,95,0.1);
+  --green: #008A05;
+  --amber: #FFB400;
+  --red: #D93025;
+  --hover: #F2F2F2;
+  --cyan: #FF5A5F; /* Fallback for existing tags */
   --radius: 12px;
 }}
 body {{
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--text-body);
   line-height: 1.6;
   min-height: 100vh;
 }}
+h1, h2, h3, .logo, .stat-value, .company-name {{ color: var(--text); }}
 .container {{ max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; }}
 
 /* Header */
@@ -353,40 +356,34 @@ body {{
   padding: 3rem 0 2rem;
   position: relative;
 }}
-.header::before {{
-  content: '';
-  position: absolute;
-  top: -60px; left: 50%; transform: translateX(-50%);
-  width: 600px; height: 300px;
-  background: radial-gradient(ellipse, var(--accent-glow) 0%, transparent 70%);
-  pointer-events: none;
-}}
-.logo {{ font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; }}
-.logo span {{ background: linear-gradient(135deg, var(--accent), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }}
-.subtitle {{ color: var(--text-dim); font-size: 1.05rem; margin-top: 0.5rem; font-weight: 400; }}
+.logo {{ font-size: 36px; font-weight: 700; line-height: 1.1; letter-spacing: -1px; color: var(--text); }}
+.logo span {{ color: var(--accent); }}
+.subtitle {{ color: var(--text-dim); font-size: 16px; margin-top: 0.5rem; font-weight: 400; }}
 
 /* Stat Cards */
 .stats-grid {{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
   margin: 2rem 0;
 }}
 .stat-card {{
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  transition: transform 0.2s, border-color 0.2s;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
 }}
-.stat-card:hover {{ transform: translateY(-2px); border-color: var(--accent); }}
-.stat-label {{ font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 0.4rem; }}
-.stat-value {{ font-size: 1.8rem; font-weight: 700; }}
+.stat-card:hover {{ transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }}
+.stat-label {{ font-size: 13px; font-weight: 500; color: var(--text-dim); margin-bottom: 0.4rem; }}
+.stat-value {{ font-size: 28px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
 .stat-value.accent {{ color: var(--accent); }}
 .stat-value.green {{ color: var(--green); }}
 .stat-value.amber {{ color: var(--amber); }}
 .stat-value.red {{ color: var(--red); }}
-.stat-value.cyan {{ color: var(--cyan); }}
+.stat-value.cyan {{ color: var(--text); }}
 
 /* Pipeline Flow */
 .pipeline-section {{
@@ -395,6 +392,7 @@ body {{
   border-radius: var(--radius);
   padding: 2rem;
   margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }}
 .pipeline-flow {{
   display: flex;
@@ -405,28 +403,29 @@ body {{
   padding: 1rem 0;
 }}
 .pipe-step {{
-  background: var(--surface-2);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.6rem 1rem;
-  font-size: 0.8rem;
+  font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
   transition: background 0.2s;
+  color: var(--text);
 }}
-.pipe-step:hover {{ background: var(--accent-glow); border-color: var(--accent); }}
-.pipe-arrow {{ color: var(--accent); font-size: 1.2rem; font-weight: 700; }}
+.pipe-step:hover {{ background: var(--hover); }}
+.pipe-arrow {{ color: var(--text-dim); font-size: 1.2rem; font-weight: 700; }}
 
 /* Section titles */
 .section-title {{
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin: 2.5rem 0 1rem;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2.5rem 0 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }}
-.section-title .dot {{ width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }}
 
 /* Table */
 .table-wrap {{
@@ -434,17 +433,18 @@ body {{
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }}
-table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
-th {{ background: var(--surface-2); color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.7rem; font-weight: 600; padding: 0.8rem 1rem; text-align: left; position: sticky; top: 0; }}
-td {{ padding: 0.7rem 1rem; border-top: 1px solid var(--border); }}
-tr:hover td {{ background: rgba(99,102,241,0.04); }}
-.num {{ text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }}
-.total {{ color: var(--green); font-weight: 600; }}
-.badge {{ display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 600; }}
-.badge-level {{ background: var(--accent-glow); color: var(--accent); border: 1px solid rgba(99,102,241,0.3); }}
+table {{ width: 100%; border-collapse: collapse; font-size: 16px; }}
+th {{ background: var(--surface); color: var(--text-dim); font-size: 12px; font-weight: 500; padding: 1rem; text-align: left; position: sticky; top: 0; border-bottom: 1px solid var(--border); }}
+td {{ padding: 1rem; border-top: 1px solid var(--border); color: var(--text-body); }}
+tr:hover td {{ background: var(--hover); }}
+.num {{ text-align: right; font-variant-numeric: tabular-nums; }}
+.total {{ color: var(--text); font-weight: 600; }}
+.badge {{ display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 500; }}
+.badge-level {{ background: var(--accent-glow); color: var(--accent); }}
 .conf-dot {{ display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }}
-.reason {{ font-size: 0.75rem; color: var(--text-dim); max-width: 300px; overflow: hidden; text-overflow: ellipsis; }}
+.reason {{ font-size: 13px; color: var(--text-dim); max-width: 300px; overflow: hidden; text-overflow: ellipsis; }}
 
 /* Bars */
 .bars-section {{
@@ -459,31 +459,34 @@ tr:hover td {{ background: rgba(99,102,241,0.04); }}
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }}
-.bars-card h3 {{ font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }}
-.bar-row {{ display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }}
-.bar-label {{ width: 80px; font-size: 0.8rem; font-weight: 500; text-align: right; }}
-.bar-track {{ flex: 1; height: 20px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }}
-.bar-fill {{ height: 100%; background: linear-gradient(90deg, var(--accent), var(--cyan)); border-radius: 4px; transition: width 0.6s ease; }}
-.bar-val {{ font-size: 0.8rem; color: var(--text-dim); width: 30px; }}
+.bars-card h3 {{ font-size: 13px; font-weight: 500; color: var(--text-dim); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.5px; }}
+.bar-row {{ display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }}
+.bar-label {{ width: 100px; font-size: 13px; font-weight: 500; text-align: right; color: var(--text); }}
+.bar-track {{ flex: 1; height: 12px; background: var(--bg); border-radius: 6px; overflow: hidden; }}
+.bar-fill {{ height: 100%; background: var(--accent); border-radius: 6px; transition: width 0.6s ease; }}
+.bar-val {{ font-size: 13px; color: var(--text-dim); width: 30px; }}
 
 /* Company rows */
-.company-row {{ display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }}
+.company-row {{ display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }}
 .company-row:last-child {{ border-bottom: none; }}
-.company-name {{ font-weight: 600; font-size: 0.85rem; }}
-.company-cnt {{ color: var(--text-dim); font-size: 0.8rem; }}
-.company-avg {{ color: var(--green); font-size: 0.85rem; font-weight: 500; }}
+.company-name {{ font-weight: 600; font-size: 16px; color: var(--text); }}
+.company-cnt {{ color: var(--text-dim); font-size: 13px; }}
+.company-avg {{ color: var(--text); font-size: 16px; font-weight: 600; }}
 
 /* Location tags */
 .loc-tags {{ display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }}
 .loc-tag {{
-  background: var(--surface-2);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 0.35rem 0.9rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  font-size: 13px;
+  color: var(--text-body);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
 }}
-.loc-tag b {{ color: var(--cyan); margin-left: 4px; }}
+.loc-tag b {{ color: var(--text); margin-left: 4px; font-weight: 600; }}
 
 /* API section */
 .api-section {{
@@ -492,34 +495,35 @@ tr:hover td {{ background: rgba(99,102,241,0.04); }}
   border-radius: var(--radius);
   padding: 1.5rem 2rem;
   margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }}
 .api-endpoint {{
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.6rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--border);
 }}
 .api-endpoint:last-child {{ border-bottom: none; }}
 .method {{
   display: inline-block;
-  padding: 2px 8px;
+  padding: 4px 8px;
   border-radius: 4px;
-  font-size: 0.7rem;
+  font-size: 12px;
   font-weight: 700;
   font-family: monospace;
 }}
-.method-get {{ background: rgba(74,222,128,0.15); color: var(--green); }}
-.method-post {{ background: rgba(251,191,36,0.15); color: var(--amber); }}
-.api-path {{ font-family: monospace; font-size: 0.85rem; font-weight: 500; }}
-.api-desc {{ color: var(--text-dim); font-size: 0.8rem; margin-left: auto; }}
+.method-get {{ background: rgba(0,138,5,0.1); color: var(--green); }}
+.method-post {{ background: rgba(255,180,0,0.1); color: var(--amber); }}
+.api-path {{ font-family: monospace; font-size: 14px; font-weight: 500; color: var(--text); }}
+.api-desc {{ color: var(--text-dim); font-size: 13px; margin-left: auto; }}
 
 /* Footer */
 .footer {{
   text-align: center;
   padding: 2rem 0;
   color: var(--text-dim);
-  font-size: 0.8rem;
+  font-size: 13px;
   border-top: 1px solid var(--border);
   margin-top: 3rem;
 }}
@@ -538,19 +542,19 @@ tr:hover td {{ background: rgba(99,102,241,0.04); }}
   <!-- Pipeline Flow -->
   <div class="pipeline-section">
     <div class="pipeline-flow">
-      <div class="pipe-step">🌐 Scraper</div>
+      <div class="pipe-step">Scraper</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">🔧 Normaliser</div>
+      <div class="pipe-step">Normaliser</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">🏢 Company Clean</div>
+      <div class="pipe-step">Company Clean</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">📊 Level Mapper</div>
+      <div class="pipe-step">Level Mapper</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">✅ Pydantic Validator</div>
+      <div class="pipe-step">Pydantic Validator</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">🔍 Dedup Check</div>
+      <div class="pipe-step">Dedup Check</div>
       <span class="pipe-arrow">→</span>
-      <div class="pipe-step">💾 Storage</div>
+      <div class="pipe-step">Storage</div>
     </div>
   </div>
 
