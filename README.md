@@ -66,8 +66,8 @@ Records rejected (total):       4
   - Negative/zero salary:       2
   - Missing required field:     1
   - Other:                      1
-Records stored successfully:    76
-Duplicates skipped:             0
+Records stored successfully:    0
+Duplicates skipped:             76
 
 NULL RATE PER FIELD:
   bonus:      0%
@@ -77,48 +77,48 @@ NULL RATE PER FIELD:
 SAMPLE (first 3 records):
 Record #1:
   [RAW]
-    Company:    Tata Consultancy Services
-    Role:       Product Manager
-    Salary:     25-30 LPA CTC
-    Location:   Noida
-    Experience: 1-2 yr
+    Company:    Goldman Sachs India
+    Role:       Software Engineer (SDE_II)
+    Salary:     ₹28L - ₹34L
+    Location:   Gurgaon
+    Experience: 10+ years
   [NORMALISED]
-    Company:    tcs (Slug: tcs)
-    Role:       Product Manager
-    Level:      TalentDashLevel.Junior
-    Location:   Noida
-    Salary:     2750000.0 (Bonus: 0.0, Stock: 0.0)
-    Total Comp: 2750000.0 (Score: 0.4)
+    Company:    goldman sachs (Slug: goldman-sachs)
+    Role:       Software Engineer (SDE_II)
+    Level:      TalentDashLevel.Senior
+    Location:   Gurugram
+    Salary:     1960000.0 (Bonus: 280000.0, Stock: 560000.0)
+    Total Comp: 2800000.0 (Score: 0.4)
 ------------------------------
 Record #2:
   [RAW]
-    Company:    Infosys BPO
-    Role:       Staff Engineer
-    Salary:     25-30 LPA CTC
-    Location:   Hyderabad
-    Experience: 1-2 yr
+    Company:    Flipkart Internet Pvt Ltd
+    Role:       Software Engineer (SDE_III)
+    Salary:     81 LPA
+    Location:   Delhi NCR
+    Experience: 2 to 4 years
   [NORMALISED]
-    Company:    infosys (Slug: infosys)
-    Role:       Staff Engineer
-    Level:      TalentDashLevel.Staff
-    Location:   Hyderabad
-    Salary:     2750000.0 (Bonus: 0.0, Stock: 0.0)
-    Total Comp: 2750000.0 (Score: 0.85)
+    Company:    flipkart (Slug: flipkart)
+    Role:       Software Engineer (SDE_III)
+    Level:      TalentDashLevel.Mid
+    Location:   Delhi NCR
+    Salary:     5670000.0 (Bonus: 810000.0, Stock: 1620000.0)
+    Total Comp: 8100000.0 (Score: 0.4)
 ------------------------------
 Record #3:
   [RAW]
-    Company:    Wipro Technologies
-    Role:       Senior Data Analyst
-    Salary:     20 LPA
+    Company:    Razorpay
+    Role:       Software Engineer (L5)
+    Salary:     ₹3.58 Cr
     Location:   Hyderabad
-    Experience: 7 Years
+    Experience: 1-2 yr
   [NORMALISED]
-    Company:    wipro (Slug: wipro)
-    Role:       Senior Data Analyst
-    Level:      TalentDashLevel.Senior
+    Company:    razorpay (Slug: razorpay)
+    Role:       Software Engineer (L5)
+    Level:      TalentDashLevel.Junior
     Location:   Hyderabad
-    Salary:     2000000.0 (Bonus: 0.0, Stock: 0.0)
-    Total Comp: 2000000.0 (Score: 0.4)
+    Salary:     25060000.0 (Bonus: 3580000.0, Stock: 7160000.0)
+    Total Comp: 35800000.0 (Score: 0.4)
 ------------------------------
 ============================
 ```
