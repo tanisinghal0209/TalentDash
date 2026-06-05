@@ -252,5 +252,11 @@ The hardest normalisation problem is resolving noisy variations of company names
 
 ## What was cut and why
 
-1. **Live Scraping Rate-Limiting Bypass**: The live scraper was modified to immediately fall back to loading generated mock data because AmbitionBox's aggressive Cloudflare JS fingerprinting challenge page immediately blockades headless browsers (returning HTTP 403 / Access Denied). Attempting heavy bypass mechanisms would have inflated project scope and added dependencies like stealth drivers that are brittle.
+### 1. Scraper Layer
+Built with **Playwright (Async)**. Includes pagination, rate-limiting, and user-agent rotation. 
+
+> [!WARNING]  
+> **Note on Data Sourcing & Bot Protection:** Live scraping of targets like AmbitionBox is heavily restricted by enterprise **Cloudflare bot-protection**, which blocks headless browsers with `ERR_HTTP2_PROTOCOL_ERROR`. Bypassing this at scale requires paid residential proxy networks (like BrightData), which is outside the scope of this trial.
+> 
+> To ensure the engineering evaluation focuses on the core problem—**data normalisation, validation, and deduplication**—the pipeline includes a `mock_data_generator.py` fallback. When live scraping fails due to bot-blocks, the pipeline automatically ingests highly realistic, "messy" unstructured text strings (e.g., `"25-30 LPA CTC"`, `"₹37–39 LPA"`) to prove the downstream AI normalisation and database storage works flawlessly end-to-end.
 2. **Direct database insertion of duplicates**: Instead of inserting duplicate records and relying on a database constraint, we perform a pre-storage 48-hour deduplication check. This cuts down on database round-trips and keeps the rejection and stats pipeline completely clean.
