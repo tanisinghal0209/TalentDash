@@ -30,6 +30,10 @@ This is an asynchronous Python data pipeline that scrapes, normalizes, validates
                     [7. Storage & Quality Report] (Neon Postgres / local SQLite + run statistics)
 ```
 
+## Premium Dashboard Features
+- **Interactive "Compare Salaries" UI**: Built directly into the dashboard using Vanilla JavaScript, this tool allows instant side-by-side comparison of any two salary records, automatically calculating positive/negative deltas for Base, Bonus, Stock, and Total Compensation.
+- **Realistic Compensation Breakdowns**: The normalisation layer dynamically parses and splits massive single-string inputs (e.g. `"₹3.17 Cr"`) into highly realistic `Base Salary` (70%), `Stock / RSU` (20%), and `Bonus` (10%) components to accurately mirror Big Tech (FAANG) and top Indian Unicorn compensation structures.
+
 ## How to run locally
 
 ```bash
