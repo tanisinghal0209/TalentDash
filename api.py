@@ -230,6 +230,12 @@ def dashboard():
             "SELECT company, role, level_standardized, location, base_salary, bonus, stock, total_compensation, confidence_score FROM salary_records WHERE is_verified = 1 ORDER BY total_compensation DESC LIMIT 15"
         ).fetchall()
 
+        # Records for comparison dropdowns
+        compare_rows = conn.execute(
+            "SELECT company, role, level_standardized, location, experience_years, base_salary, bonus, stock, total_compensation FROM salary_records WHERE is_verified = 1 ORDER BY total_compensation DESC LIMIT 50"
+        ).fetchall()
+        compare_records_json = json.dumps([dict(r) for r in compare_rows])
+
         # Level dist
         level_dist = conn.execute(
             "SELECT level_standardized, COUNT(*) as cnt FROM salary_records WHERE is_verified = 1 GROUP BY level_standardized ORDER BY cnt DESC"
@@ -240,7 +246,6 @@ def dashboard():
             "SELECT company, COUNT(*) as cnt, ROUND(AVG(base_salary)) as avg_sal FROM salary_records WHERE is_verified = 1 GROUP BY company ORDER BY avg_sal DESC"
         ).fetchall()
 
-        # Location dist
         location_dist = conn.execute(
             "SELECT location, COUNT(*) as cnt FROM salary_records WHERE is_verified = 1 GROUP BY location ORDER BY cnt DESC"
         ).fetchall()
@@ -250,6 +255,7 @@ def dashboard():
         total = verified = companies = roles = 0
         avg_salary = max_comp = 0
         top_records = []
+        compare_records_json = "[]"
         level_dist = []
         company_dist = []
         location_dist = []
@@ -518,6 +524,65 @@ tr:hover td {{ background: var(--hover); }}
 .api-path {{ font-family: monospace; font-size: 14px; font-weight: 500; color: var(--text); }}
 .api-desc {{ color: var(--text-dim); font-size: 13px; margin-left: auto; }}
 
+/* Compare UI */
+.compare-container {{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}}
+.compare-selectors {{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}}
+.compare-box {{
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--bg);
+}}
+.compare-box select {{
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-top: 0.5rem;
+}}
+.compare-label {{
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+}}
+.winner-badge {{
+  background: #005A9C;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}}
+.compare-table {{
+  width: 100%;
+  border-collapse: collapse;
+}}
+.compare-table th {{ background: transparent; color: var(--text-dim); font-size: 12px; border-bottom: 1px solid var(--border); padding: 1rem; text-align: left; }}
+.compare-table td {{ padding: 1rem; border-top: 1px solid var(--border); color: var(--text-body); }}
+.compare-table tr:hover td {{ background: var(--hover); }}
+.delta-pos {{ color: var(--green); font-weight: 600; }}
+.delta-neg {{ color: var(--red); font-weight: 600; }}
+.delta-zero {{ color: var(--text-dim); }}
+
 /* Footer */
 .footer {{
   text-align: center;
@@ -613,6 +678,36 @@ tr:hover td {{ background: var(--hover); }}
     {location_tags}
   </div>
 
+  <!-- Compare Salaries UI -->
+  <div class="section-title"><span class="dot"></span> Compare Salaries</div>
+  <p style="color:var(--text-dim); margin-top:-1rem; margin-bottom:1.5rem; font-size:14px;">Select two salary records to see a side-by-side breakdown with deltas.</p>
+  <div class="compare-container">
+    <div class="compare-selectors">
+      <div class="compare-box" id="boxA">
+        <div class="compare-label">RECORD A <span id="winnerA" class="winner-badge" style="display:none;">Higher TC</span></div>
+        <select id="selectA"></select>
+      </div>
+      <div class="compare-box" id="boxB">
+        <div class="compare-label">RECORD B <span id="winnerB" class="winner-badge" style="display:none;">Higher TC</span></div>
+        <select id="selectB"></select>
+      </div>
+    </div>
+    
+    <table class="compare-table" id="compareTable">
+      <thead>
+        <tr>
+          <th>FIELD</th>
+          <th>RECORD A <span id="colWinnerA" class="winner-badge" style="display:none;">WINNER</span></th>
+          <th>RECORD B <span id="colWinnerB" class="winner-badge" style="display:none;">WINNER</span></th>
+          <th>DELTA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </div>
+
   <!-- Records Table -->
   <div class="section-title"><span class="dot"></span> Top Salary Records</div>
   <div class="table-wrap">
@@ -695,6 +790,79 @@ tr:hover td {{ background: var(--hover); }}
   </div>
 
 </div>
+
+<script>
+  const compareRecords = {compare_records_json};
+  const selectA = document.getElementById('selectA');
+  const selectB = document.getElementById('selectB');
+  const tbody = document.querySelector('#compareTable tbody');
+
+  function formatMoney(val) {{
+      if (val >= 10000000) return '₹' + (val / 10000000).toFixed(2) + ' Cr';
+      if (val >= 100000) return '₹' + (val / 100000).toFixed(2) + ' L';
+      return '₹' + val.toLocaleString('en-IN');
+  }}
+
+  function formatDelta(diff, isText=false) {{
+      if (isText) return diff === 0 ? '—' : (diff > 0 ? '+' + diff : diff);
+      if (diff === 0) return '—';
+      const sign = diff > 0 ? '+' : '-';
+      const absDiff = Math.abs(diff);
+      return sign + formatMoney(absDiff);
+  }}
+
+  function getDeltaClass(diff) {{
+      if (diff === 0) return 'delta-zero';
+      return diff > 0 ? 'delta-pos' : 'delta-neg';
+  }}
+
+  function initCompare() {{
+      if (!compareRecords || compareRecords.length === 0) return;
+      
+      compareRecords.forEach((r, i) => {{
+          const label = `${{r.company}} — ${{r.role}} (${{r.level_standardized}}) — ${{formatMoney(r.total_compensation)}}`;
+          selectA.add(new Option(label, i));
+          selectB.add(new Option(label, i));
+      }});
+      
+      if (compareRecords.length > 1) selectB.selectedIndex = 1;
+
+      selectA.addEventListener('change', updateCompare);
+      selectB.addEventListener('change', updateCompare);
+      updateCompare();
+  }}
+
+  function updateCompare() {{
+      const rA = compareRecords[selectA.value];
+      const rB = compareRecords[selectB.value];
+      if (!rA || !rB) return;
+
+      const tcDiff = rA.total_compensation - rB.total_compensation;
+      document.getElementById('winnerA').style.display = tcDiff > 0 ? 'inline-block' : 'none';
+      document.getElementById('colWinnerA').style.display = tcDiff > 0 ? 'inline-block' : 'none';
+      document.getElementById('winnerB').style.display = tcDiff < 0 ? 'inline-block' : 'none';
+      document.getElementById('colWinnerB').style.display = tcDiff < 0 ? 'inline-block' : 'none';
+      
+      document.getElementById('boxA').style.borderColor = tcDiff > 0 ? '#005A9C' : 'var(--border)';
+      document.getElementById('boxB').style.borderColor = tcDiff < 0 ? '#005A9C' : 'var(--border)';
+
+      const rows = [
+          ['Company', `<b>${{rA.company}}</b>`, `<b>${{rB.company}}</b>`, '—'],
+          ['Role', rA.role, rB.role, '—'],
+          ['Level', `<span class="badge badge-level">${{rA.level_standardized}}</span>`, `<span class="badge badge-level">${{rB.level_standardized}}</span>`, '—'],
+          ['Location', rA.location, rB.location, '—'],
+          ['Experience', `${{rA.experience_years}} years`, `${{rB.experience_years}} years`, `<span class="${{getDeltaClass(rA.experience_years - rB.experience_years)}}">${{formatDelta(rA.experience_years - rB.experience_years, true)}}</span>`],
+          ['Base Salary', formatMoney(rA.base_salary), formatMoney(rB.base_salary), `<span class="${{getDeltaClass(rA.base_salary - rB.base_salary)}}">${{formatDelta(rA.base_salary - rB.base_salary)}}</span>`],
+          ['Bonus', formatMoney(rA.bonus), formatMoney(rB.bonus), `<span class="${{getDeltaClass(rA.bonus - rB.bonus)}}">${{formatDelta(rA.bonus - rB.bonus)}}</span>`],
+          ['Stock / RSU', formatMoney(rA.stock), formatMoney(rB.stock), `<span class="${{getDeltaClass(rA.stock - rB.stock)}}">${{formatDelta(rA.stock - rB.stock)}}</span>`],
+          ['Total Comp', `<b style="color:#005A9C">${{formatMoney(rA.total_compensation)}}</b>`, `<b style="color:#005A9C">${{formatMoney(rB.total_compensation)}}</b>`, `<span class="${{getDeltaClass(tcDiff)}}">${{formatDelta(tcDiff)}}</span>`]
+      ];
+
+      tbody.innerHTML = rows.map(r => `<tr><td>${{r[0]}}</td><td>${{r[1]}}</td><td>${{r[2]}}</td><td>${{r[3]}}</td></tr>`).join('');
+  }}
+
+  document.addEventListener('DOMContentLoaded', initCompare);
+</script>
 
 </body>
 </html>"""
